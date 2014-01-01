@@ -1,0 +1,63 @@
+.pagewrap {
+	@include container($container);
+}
+
+.clearfix {
+	clear: both;
+}
+.row {
+/* 	width: 100%; */
+	padding: $pad;
+	background: $yellow;
+	margin: 0 auto 3rem;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+    }
+    
+	[class*='col'] {
+		float: left;
+		padding: $pad;
+/* 		&:last-of-type { content: ""; clear: both; } */
+	}
+	.col1 {
+		width: percentage( 5.66666666666667rem / $container );
+		width: 8.3333%;
+	}
+	.col2 {
+		width: percentage( 11.33333333333333rem / $container );
+		width: 16.6667%;
+	}
+	.col3 {
+		width: percentage( 17rem / $container);
+		width: 25%;
+	}
+	.col4 {
+		width: 33.3333%;
+	}
+	.col5 {
+		width: 41.6667%;
+	}
+	.col6 {
+		width: 50%;
+	}
+	.col7 {
+		width: 58.3333%;
+	}
+	.col8 {
+		width: 66.6667%;
+	}
+	.col9 {
+		width: 75%;
+	}
+	.col10 {
+		width: 83.3333%;
+	}
+	.col11 {
+		width: 91.6667%;
+	}
+	.col12 {
+		width: 100%;
+	}
+} 
