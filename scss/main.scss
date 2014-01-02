@@ -7,8 +7,11 @@
 
 
 header {
+@include container($container);
+padding: $pad;
 	h1 {
 		text-align: center;
+		font-weight: 700;
 	}
 }
 
@@ -16,7 +19,10 @@ header {
 .main {
 	@include container($container);
 	article {
-		@include col(4, 12);
+		&:first-of-type { @include col(6, 12); @media (max-width: $mobile) { @include col (12,12); }}
+		@include col(3, 12);
+		@media (max-width: $mobile) { @include col (6,12); }	
+
 	}
 }
 
@@ -25,12 +31,16 @@ header {
 	div {
 		@include col(1, 3);
 		background: $yellow;
-		min-height: 500px;
+		min-height: 250px;
+		color: #f7f7f7;
 		&:nth-of-type(even) {
 			background: $text;
-		}		
+		}
+		@media (max-width: $mobile) { @include col (1,1); }	
 	}
-	p {
-		color: #f7f7f7;
-	}
+}
+
+footer {
+	@include container($container);
+	padding: $pad;
 }

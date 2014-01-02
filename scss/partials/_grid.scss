@@ -1,11 +1,7 @@
 //grid functions & mixins 
-
-
-
-
 @mixin container($width: 68rem) {
 	margin: 0 auto;
-	padding: 1rem;
+	padding: 0 $pad;
 	max-width: $width;
 	&:after {
 		content: "";
@@ -36,7 +32,12 @@
 }
 
 
+//handling media queries
 
+
+
+
+//box sizing
 @mixin box-sizing($box-model: border-box) {
   -webkit-box-sizing: $box-model; 
      -moz-box-sizing: $box-model; 

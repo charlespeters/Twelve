@@ -255,6 +255,11 @@ table {
   text-rendering: optimizeLegibility;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   font: 300 100%/1.5 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #333333;
@@ -262,6 +267,37 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+  margin: 0;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 225%;
+}
+
+h2 {
+  font-size: 200%;
+}
+
+h3 {
+  font-size: 175%;
+}
+
+h4 {
+  font-size: 150%;
+}
+
+h5 {
+  font-size: 125%;
+}
+
+h6 {
+  font-size: 100%;
+}
+
+ul, ol {
+  list-style-position: inside;
+  padding: 0;
 }
 
 a {
@@ -269,13 +305,36 @@ a {
   color: #fab315;
 }
 
+p {
+  margin: .375rem 0;
+}
+
+blockquote {
+  border-left: 5px solid #f3f3f3;
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+header {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 75rem;
+  padding: 1rem;
+}
+header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 header h1 {
   text-align: center;
+  font-weight: 700;
 }
 
 .main {
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0 1rem;
   max-width: 75rem;
 }
 .main:after {
@@ -286,9 +345,43 @@ header h1 {
 .main article {
   float: left;
   padding: 1rem;
-  width: 33.33333%;
+  width: 25%;
+}
+.main article:first-of-type {
+  float: left;
+  padding: 1rem;
+  width: 50%;
 }
 @media (max-width: 500px) {
+  .main article:first-of-type {
+    padding: .5rem;
+  }
+}
+@media (max-width: 500px) {
+  .main article:first-of-type {
+    float: left;
+    padding: 1rem;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) and (max-width: 500px) {
+  .main article:first-of-type {
+    padding: .5rem;
+  }
+}
+@media (max-width: 500px) {
+  .main article {
+    padding: .5rem;
+  }
+}
+@media (max-width: 500px) {
+  .main article {
+    float: left;
+    padding: 1rem;
+    width: 50%;
+  }
+}
+@media (max-width: 500px) and (max-width: 500px) {
   .main article {
     padding: .5rem;
   }
@@ -296,7 +389,7 @@ header h1 {
 
 .thegrid {
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0 1rem;
   max-width: 1200px;
 }
 .thegrid:after {
@@ -309,7 +402,8 @@ header h1 {
   padding: 1rem;
   width: 33.33333%;
   background: #fab315;
-  min-height: 500px;
+  min-height: 250px;
+  color: #f7f7f7;
 }
 @media (max-width: 500px) {
   .thegrid div {
@@ -319,6 +413,27 @@ header h1 {
 .thegrid div:nth-of-type(even) {
   background: #333333;
 }
-.thegrid p {
-  color: #f7f7f7;
+@media (max-width: 500px) {
+  .thegrid div {
+    float: left;
+    padding: 1rem;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) and (max-width: 500px) {
+  .thegrid div {
+    padding: .5rem;
+  }
+}
+
+footer {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 75rem;
+  padding: 1rem;
+}
+footer:after {
+  content: "";
+  display: table;
+  clear: both;
 }
