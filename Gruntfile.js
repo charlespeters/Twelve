@@ -12,7 +12,8 @@ module.exports = function(grunt) {
     connect: {
         target:{
             options: {
-                port: 9001,                
+                port: 9001,
+                keepalive: true
             }
         }
     },
@@ -27,6 +28,9 @@ module.exports = function(grunt) {
     }
   },
   watch: {
+      options: {
+      livereload: true,
+    },
   css: {
     files: ['scss/*.scss', 'scss/libs/*.scss', 'scss/partials/*.scss'],
     tasks: ['sass'],

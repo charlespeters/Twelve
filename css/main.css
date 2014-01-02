@@ -238,6 +238,12 @@ table {
   border-spacing: 0;
 }
 
+/* calculates width as a decimal */
+/* 
+	transforms that decimal to a percentage the browser can use 
+	creates a column that floats left.
+	
+*/
 * {
   margin: 0;
   padding: 0;
@@ -254,73 +260,65 @@ body {
   color: #333333;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
 a {
   text-decoration: none;
   color: #fab315;
 }
 
-.pagewrap {
+header h1 {
+  text-align: center;
+}
+
+.main {
   margin: 0 auto;
   padding: 1rem;
   max-width: 75rem;
 }
-
-.clearfix {
-  clear: both;
-}
-
-.row {
-  /* 	width: 100%; */
-  padding: 1rem;
-  background: #fab315;
-  margin: 0 auto 3rem;
-}
-.row:after {
+.main:after {
   content: "";
   display: table;
   clear: both;
 }
-.row [class*='col'] {
+.main article {
   float: left;
   padding: 1rem;
-  /* 		&:last-of-type { content: ""; clear: both; } */
+  width: 33.33333%;
 }
-.row .col1 {
-  width: 7.55556%;
-  width: 8.3333%;
+@media (max-width: 500px) {
+  .main article {
+    padding: .5rem;
+  }
 }
-.row .col2 {
-  width: 15.11111%;
-  width: 16.6667%;
+
+.thegrid {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 1200px;
 }
-.row .col3 {
-  width: 22.66667%;
-  width: 25%;
+.thegrid:after {
+  content: "";
+  display: table;
+  clear: both;
 }
-.row .col4 {
-  width: 33.3333%;
+.thegrid div {
+  float: left;
+  padding: 1rem;
+  width: 33.33333%;
+  background: #fab315;
+  min-height: 500px;
 }
-.row .col5 {
-  width: 41.6667%;
+@media (max-width: 500px) {
+  .thegrid div {
+    padding: .5rem;
+  }
 }
-.row .col6 {
-  width: 50%;
+.thegrid div:nth-of-type(even) {
+  background: #333333;
 }
-.row .col7 {
-  width: 58.3333%;
-}
-.row .col8 {
-  width: 66.6667%;
-}
-.row .col9 {
-  width: 75%;
-}
-.row .col10 {
-  width: 83.3333%;
-}
-.row .col11 {
-  width: 91.6667%;
-}
-.row .col12 {
-  width: 100%;
+.thegrid p {
+  color: #f7f7f7;
 }
