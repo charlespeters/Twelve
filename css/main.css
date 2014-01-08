@@ -244,6 +244,30 @@ table {
 	creates a column that floats left.
 	
 */
+.grid {
+  margin: 1rem auto;
+  max-width: 1200px;
+}
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class*='col-'] {
+  float: left;
+  margin-right: 2%;
+  background: #fab315;
+}
+[class*='col-']:last-of-type {
+  margin-right: 0;
+}
+
+.col-1-3 {
+  width: 32%;
+  padding: 1rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -378,7 +402,7 @@ header h1 {
   .main article {
     float: left;
     padding: 1rem;
-    width: 50%;
+    width: 100%;
   }
 }
 @media (max-width: 500px) and (max-width: 500px) {

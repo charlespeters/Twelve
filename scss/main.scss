@@ -5,7 +5,6 @@
 @import "partials/typography";
 
 
-
 header {
 @include container($container);
 padding: $pad;
@@ -21,7 +20,7 @@ padding: $pad;
 	article {
 		&:first-of-type { @include col(6, 12); @media (max-width: $mobile) { @include col (12,12); }}
 		@include col(3, 12);
-		@media (max-width: $mobile) { @include col (6,12); }	
+		@media (max-width: $mobile) { @include col (12,12); }	
 
 	}
 }
