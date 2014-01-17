@@ -245,7 +245,7 @@ table {
 	
 */
 .grid {
-  margin: 1rem auto;
+  margin: 2% auto;
   max-width: 1200px;
 }
 .grid:after {
@@ -265,6 +265,11 @@ table {
 
 .col-1-3 {
   width: 32%;
+  padding: 1rem;
+}
+
+.col-2-3 {
+  width: 66%;
   padding: 1rem;
 }
 
