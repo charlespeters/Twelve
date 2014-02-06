@@ -2,7 +2,7 @@
 @import "libs/normalize";
 @import "partials/grid";
 @import "partials/global";
-@import "partials/typography";
+@import "partials/resetatron";
 
 
 header {
@@ -32,9 +32,7 @@ padding: $pad;
 		background: $yellow;
 		min-height: 250px;
 		color: #f7f7f7;
-		&:nth-of-type(even) {
-			background: $text;
-		}
+		&:nth-of-type(even) { }
 		@media (max-width: $mobile) { @include col (1,1); }	
 	}
 }
