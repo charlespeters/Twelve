@@ -4,6 +4,7 @@
 @import "partials/global";
 @import "partials/resetatron";
 @import "libs/opensans";
+@import "partials/typography";
 
 
 header {
@@ -11,6 +12,7 @@ header {
 padding: $pad;
 	h1 {
 		text-align: center;
+		font-size: 5rem;
 		font-weight: 700;
 	}
 }
