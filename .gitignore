@@ -1,3 +1,23 @@
+# Grunt #
+#########
 node_modules
+*.sass_cache*
+**.sass-cache**
+**/.sass-cache/*
+.sass_cache
 
-*.sass_cache
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
