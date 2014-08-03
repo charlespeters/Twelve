@@ -1,5 +1,5 @@
 Twelve
-======
+---
 
 ## Really Simple SASS Mixins to Create a Grid Layout
 

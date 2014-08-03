@@ -5,6 +5,7 @@
 @import "partials/resetatron";
 @import "partials/typography";
 
+$blue: blue;
 
 header {
 @include container($container);

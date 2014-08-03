@@ -2,8 +2,7 @@ var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
     plumber      = require('gulp-plumber'),
     autoprefixer = require('gulp-autoprefixer'),
-    connect      = require('gulp-connect'),
-    imagemin     = require('gulp-imagemin');
+    connect      = require('gulp-connect');
 
 gulp.task('styles', function(){
     gulp.src('src/twelve/**/*.scss')
@@ -21,8 +20,8 @@ gulp.task('html', function () {
 });
 
 gulp.task('watch', function(){
-    gulp.watch('scss/**/*.scss', ['styles']);
-    gulp.watch(['index.html'], ['html']);
+    gulp.watch('src/twelve/**/*.scss', ['styles']);
+    gulp.watch(['src/index.html'], ['html']);
 });
 
 gulp.task('connect', function() {
