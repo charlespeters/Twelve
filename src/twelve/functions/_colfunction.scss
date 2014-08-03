@@ -30,3 +30,27 @@
         padding: .5rem;
     }
 }
+
+
+@for $i from 1 through 12 {
+    .column-#{$i}-12 {
+        float: left;
+        // 6.5 = (total space - total guttersize (11 gutters*2%))/total columns
+        width: ($i*6.5) + (($i - 1)*2%);
+        @if $i == 12 {} @else {
+          margin-right: 2%;
+          &:last-child { margin-right: 0; }
+        }
+    }
+}
+
+// the for directive as a mixin
+@mixin column-width($n, $context) {
+    $width: (100% - (($context - 1)*2))/$context;
+    float: left;
+    width: ($n*$width) + (($n - 1)*2%);
+    @if $n == $context {} @else {
+      margin-right: 2%;
+      &:last-child { margin-right: 0; }
+    }
+}

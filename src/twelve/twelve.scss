@@ -44,3 +44,8 @@ footer {
     @include container($container);
     padding: $pad;
 }
+
+
+.column-calc {
+    @include column-width(6,12);
+}
