@@ -1,0 +1,32 @@
+//grid functions & mixins
+@mixin container($width: 68rem) {
+    margin: 0 auto;
+    padding: 0 $pad;
+    max-width: $width;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+}
+
+/* calculates width as a decimal */
+@function width($span, $context:12) {
+    @return ($span / $context);
+}
+
+/*
+    transforms that decimal to a percentage the browser can use
+    creates a column that floats left.
+
+*/
+
+@mixin col($span, $context){
+    float: left;
+    padding: $pad;
+    width: percentage( width($span, $context) );
+    @media (max-width: $mobile) {
+        padding: .5rem;
+    }
+}

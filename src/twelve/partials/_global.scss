@@ -1,13 +1,12 @@
-* {
+*, *:before, *:after {
 	margin: 0;
 	padding: 0;
-	@include box-sizing();
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-rendering: optimizeLegibility;
+	box-sizing: inherit;
 }
-
-img {
+html {
+	box-sizing: border-box;
+}
+img, picture {
 	max-width: 100%;
 	height: auto;
 }

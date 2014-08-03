@@ -1,26 +1,18 @@
-$text: #333;
 
 /* Reset */
 * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-   font: 300 100%/1.4 "Helvetica", "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font: 300 100%/1.4 "Helvetica", "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
    color: $text;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-weight: normal;
     margin: 0;
-    line-height: 1.25
+    line-height: 1.4;
 }
 
 h1 { font-size: 225%; }
@@ -58,7 +50,3 @@ blockquote {
 	color: white;
 	p { color: white; }
 }
-
-
-
-

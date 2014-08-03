@@ -1,7 +1,8 @@
 @import "partials/variables";
-@import "libs/normalize";
-@import "partials/grid";
+// @import "libs/normalize";
 @import "partials/global";
+@import "functions/colfunction";
+@import "partials/grid";
 @import "partials/resetatron";
 @import "partials/typography";
 
@@ -35,7 +36,6 @@ padding: $pad;
         background: $yellow;
         min-height: 250px;
         color: #f7f7f7;
-        &:nth-of-type(even) { }
         @media (max-width: $mobile) { @include col (1,1); }
     }
 }
