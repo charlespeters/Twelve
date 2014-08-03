@@ -3,7 +3,6 @@
 @import "partials/grid";
 @import "partials/global";
 @import "partials/resetatron";
-@import "libs/opensans";
 @import "partials/typography";
 
 
@@ -23,7 +22,7 @@ padding: $pad;
 	article {
 		&:first-of-type { @include col(6, 12); @media (max-width: $mobile) { @include col (12,12); }}
 		@include col(3, 12);
-		@media (max-width: $mobile) { @include col (12,12); }	
+		@media (max-width: $mobile) { @include col (12,12); }
 
 	}
 }
@@ -36,7 +35,7 @@ padding: $pad;
 		min-height: 250px;
 		color: #f7f7f7;
 		&:nth-of-type(even) { }
-		@media (max-width: $mobile) { @include col (1,1); }	
+		@media (max-width: $mobile) { @include col (1,1); }
 	}
 }
 
