@@ -1,0 +1,19 @@
+/* calculates width as a decimal */
+@function old--width($span, $context:12) {
+    @return ($span / $context);
+}
+
+/*
+    transforms that decimal to a percentage the browser can use
+    creates a column that floats left.
+
+*/
+
+@mixin old--col($span, $context){
+    float: left;
+    padding: $pad;
+    width: percentage( width($span, $context) );
+    @media (max-width: $mobile) {
+        padding: .5rem;
+    }
+}

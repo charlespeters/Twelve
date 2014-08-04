@@ -1,14 +1,16 @@
-$break-small: 320px;
-$break-large: 1024px;
+$breakpoint--small: 31.25rem; // 500px/16px
+$breakpoint--medium: 48rem; // 768px/16px
+$breakpoint--large: 64rem; // 1024px/16px
+$breakpoint--larger: 75rem; // 1200px/16px
 
 @mixin respond-to($media) {
-  @if $media == handhelds {
-    @media only screen and (max-width: $break-small) { @content; }
-  }
-  @else if $media == medium-screens {
-    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
-  }
-  @else if $media == wide-screens {
-    @media only screen and (min-width: $break-large) { @content; }
-  }
+    @if $media == handhelds {
+        @media only screen and (max-width: $breakpoint--small) { @content; }
+    }
+    @else if $media == mediumscreens {
+        @media only screen and (min-width: $breakpoint--small + 1) and (max-width: $breakpoint--large - 1) { @content; }
+    }
+    @else if $media == widescreens {
+        @media only screen and (min-width: $breakpoint--large) { @content; }
+    }
 }

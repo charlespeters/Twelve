@@ -2,70 +2,39 @@
 //grid functions & mixins
 @mixin grid-container($w: 68rem) {
     margin: 0 auto;
-    padding: 0 $pad;
     max-width: $w;
-    &:after {
+    &::after {
         content: "";
         display: table;
         clear: both;
     }
-
 }
 
-/* calculates width as a decimal */
-@function width($span, $context:12) {
-    @return ($span / $context);
-}
-
-/*
-    transforms that decimal to a percentage the browser can use
-    creates a column that floats left.
-
-*/
-
-@mixin col($span, $context){
-    float: left;
-    padding: $pad;
-    width: percentage( width($span, $context) );
-    @media (max-width: $mobile) {
-        padding: .5rem;
-    }
-}
 
 // NEW STUFF
-
-
-@for $i from 1 through 12 {
-    .column-#{$i}-12 {
+$ends: 3,4,6,8,12;
+$gutterSize: 2%;
+@each $end in $ends {
+  @for $i from 1 through $end {
+    $single--column: (100 - (($end - 1)*$gutterSize )) / $end;
+    .column-#{$i}-#{$end} {
         float: left;
-        // 6.5 = (total space - total guttersize (11 gutters*2%))/total columns
-        width: ($i*6.5) + (($i - 1)*2%);
-        @if $i == 12 {} @else {
-          margin-right: 2%;
+        width: ($i*$single--column) + (($i - 1)*$gutterSize);
+        @if $i == $end {} @else {
+          margin-right: $gutterSize;
           &:last-child { margin-right: 0; }
         }
     }
-}
-
-@for $i from 1 through 3 {
-    .column-#{$i}-3 {
-        float: left;
-        // 32 = (total space - total guttersize (11 gutters*2%))/total columns
-        width: ($i*32) + (($i - 1)*2%);
-        @if $i == 3 {} @else {
-          margin-right: 2%;
-          &:last-child { margin-right: 0; }
-        }
-    }
+  }
 }
 
 // the for directive as a mixin
-@mixin column-width($n, $context) {
-    $width: (100% - (($context - 1)*2))/$context;
+@mixin column-width($n, $context, $margin: 2%) {
+    $width: (100% - (($context - 1) * $margin))/$context;
     float: left;
-    width: ($n*$width) + (($n - 1)*2%);
+    width: ($n*$width) + (($n - 1) * $margin);
     @if $n == $context {} @else {
-      margin-right: 2%;
+      margin-right: $margin;
       &:last-child { margin-right: 0; }
     }
 }
