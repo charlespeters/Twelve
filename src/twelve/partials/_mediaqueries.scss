@@ -1,8 +1,3 @@
-$breakpoint--small: 31.25rem; // 500px/16px
-$breakpoint--medium: 48rem; // 768px/16px
-$breakpoint--large: 64rem; // 1024px/16px
-$breakpoint--larger: 75rem; // 1200px/16px
-
 @mixin respond-to($media) {
     @if $media == handhelds {
         @media only screen and (max-width: $breakpoint--small) { @content; }
