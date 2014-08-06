@@ -1,4 +1,3 @@
-// OLD STUFF
 //grid functions & mixins
 @mixin grid-container($w: $container) {
     margin: 0 auto;
@@ -10,14 +9,28 @@
     }
 }
 
+// the @for directive as a mixin
+@mixin col-width($n, $context, $margin: 2%) {
+    $width: (100% - (($context - 1) * $margin))/$context;
+    float: left;
+    width: ($n*$width) + (($n - 1) * $margin);
+    padding: $pad;
+    @if $n == $context {} @else {
+      margin-right: $margin;
+      &:last-child { margin-right: 0; }
+    }
+}
 
-// NEW STUFF
+
+// Runs through the number of columns max
+// Creates a group of @extend %partials based off that
+
 $ends: 3,4,6,8,12;
 $gutterSize: 2%;
 @each $end in $ends {
   @for $i from 1 through $end {
     $single--column: (100 - (($end - 1)*$gutterSize )) / $end;
-    .column-#{$i}-#{$end} {
+    %col-#{$i}-#{$end} {
         float: left;
         width: ($i*$single--column) + (($i - 1)*$gutterSize);
         padding: $pad;
@@ -27,15 +40,4 @@ $gutterSize: 2%;
         }
     }
   }
-}
-
-// the for directive as a mixin
-@mixin column-width($n, $context, $margin: 2%) {
-    $width: (100% - (($context - 1) * $margin))/$context;
-    float: left;
-    width: ($n*$width) + (($n - 1) * $margin);
-    @if $n == $context {} @else {
-      margin-right: $margin;
-      &:last-child { margin-right: 0; }
-    }
 }
