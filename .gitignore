@@ -1,4 +1,4 @@
-# Grunt #
+# Gulp #
 #########
 node_modules
 *.sass_cache*
@@ -21,3 +21,5 @@ node_modules
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+dist/
