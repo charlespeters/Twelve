@@ -1,15 +1,5 @@
 @import "partials/variables";
-@import "partials/global";
 @import "functions/depreciated";
 @import "functions/colfunction";
+@import "partials/global";
 @import "partials/mediaqueries";
-@import "partials/grid";
-
-@import "partials/typography";
-
-
-header {
-    @include grid-container($container);
-    padding: $pad;
-    h1 { text-align: center; font-size: 3.5rem; font-weight: 700; }
-}

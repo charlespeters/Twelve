@@ -1,6 +1,6 @@
 // OLD STUFF
 //grid functions & mixins
-@mixin grid-container($w: 68rem) {
+@mixin grid-container($w: $container) {
     margin: 0 auto;
     max-width: $w;
     &::after {
@@ -20,6 +20,7 @@ $gutterSize: 2%;
     .column-#{$i}-#{$end} {
         float: left;
         width: ($i*$single--column) + (($i - 1)*$gutterSize);
+        padding: $pad;
         @if $i == $end {} @else {
           margin-right: $gutterSize;
           &:last-child { margin-right: 0; }
