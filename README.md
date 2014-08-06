@@ -62,13 +62,12 @@ and for the columns of your grid
 ## Contributing
 
 ## Licensing
-MIT
+MIT or GPL or WTFLP or Something
 
 ### To Do
+0. Finish README.md
 1. Work On Media Queries
-2. Clean Up Old Functions and Mixins
-3. Establish a Project Hierarchy
+2. ~~Clean Up Old Functions and Mixins~~
+3. ~~Establish a Project Hierarchy~~
 4. Grid Block from [CSS-Tricks](http://css-tricks.com/video-screencasts/132-quick-useful-case-sass-math-mixins) Concept
-5. Readme
 6. Work on Github Pages
-7. Show Dave Rupert
