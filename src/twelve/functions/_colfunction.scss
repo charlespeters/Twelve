@@ -1,14 +1,3 @@
-//grid functions & mixins
-@mixin grid-container($w: $container) {
-    margin: 0 auto;
-    max-width: $w;
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
 // the @for directive as a mixin
 @mixin col-width($n, $context, $margin: 2%) {
     $width: (100% - (($context - 1) * $margin))/$context;
