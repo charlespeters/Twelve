@@ -1,4 +1,4 @@
-# Gulp #
+# Grunt #
 #########
 node_modules
 *.sass_cache*
@@ -23,6 +23,3 @@ ehthumbs.db
 Thumbs.db
 
 dist/
-src/index.html
-
-src/index.html

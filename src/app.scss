@@ -1,0 +1,60 @@
+@import "twelve/twelve";
+
+$blue: #2487b0;
+$pad: .25rem;
+
+html {
+    font-family: sans-serif;
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+    background: rgba($blue, .25);
+}
+
+header {
+    padding: 2rem 1rem;
+    text-align: center;
+    color: tomato;
+}
+
+
+
+$ends: 3,4,6,8,12;
+$gutterSize: 2%;
+@each $end in $ends {
+  @for $i from 1 through $end {
+    .col-#{$i}-#{$end} {
+        @extend %col-#{$i}-#{$end};
+        background: $blue;
+        color: white;
+        font-size: .875em;
+        padding: $pad*6 $pad;
+        border-bottom: 2px solid mix(tomato, $blue, 80%);
+        @if $i > 6 {
+            @include respond-to(handhelds) {
+                width: 100%;
+                margin-right: 0;
+            }
+
+        } @else {
+           @include respond-to(handhelds) {
+                width: 49%;
+                // margin-right: 0;
+            //    margin-right: 0;
+           }
+        }
+    }
+  }
+}
+
+.grid-ex {
+    text-align: center;
+    font-weight: bold;
+}
+.container {
+    @include grid-container();
+    padding: 0 $pad*2 $pad*4;
+    font-size: 87.5%;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}

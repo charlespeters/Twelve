@@ -7,10 +7,10 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     style: 'compressed',
-                    sourcemap: true
                 },
                 files: {
-                    'build/css/twelve.css': 'src/scss/twelve.scss',
+                    'dist/css/twelve.css': 'src/twelve/twelve.scss',
+                    'dist/css/app.css': 'src/app.scss'
                 }
             }
         },
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
                 options: { livereload: 35729 }
             },
             css: {
-                files: ['src/scss/*.scss','src/scss/**/*.scss'],
+                files: ['src/*.scss','src/twelve/*.scss','src/twelve/**/*.scss'],
                 tasks: ['sass', 'autoprefixer', 'cssmin'],
                 options: { livereload: 35729 }
             },
