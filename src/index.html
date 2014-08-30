@@ -1,46 +1,85 @@
 <html>
   <head>
     <title>Twelve</title>
-    <link rel="stylesheet" href="/css/twelve.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/css/twelve.min.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="/css/app.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7107912/771344/css/fonts.css" />
   </head>
   <body>
     <header>
-      <h1>Twelve</h1>
+        <div class="container">
+            <div class="app--title col-6-12">
+                <h1>Twelve</h1>
+            </div>
+            <div class="app--desc col-6-12">
+                <p>A SASS based grid designed by a crazy person.</p>
+            </div>
+        </div>
     </header>
     <main>
-        <div class="container">
-            <div class="grid-ex col-3-12">.col-3-12</div>
-            <div class="grid-ex col-3-12">.col-3-12</div>
-            <div class="grid-ex col-3-12">.col-3-12</div>
-            <div class="grid-ex col-3-12">.col-3-12</div>
-        </div>
-        <div class="container">
-            <div class="grid-ex col-8-12">.col-8-12</div>
-            <div class="grid-ex col-3-12">.col-3-12</div>
-            <div class="grid-ex col-1-12">.col-1-12</div>
-        </div>
-        <div class="container">
-            <div class="grid-ex col-7-12">.col-7-12</div>
-            <div class="grid-ex col-5-12">.col-5-12</div>
-        </div>
-        <div class="container">
-            <div class="grid-ex col-6-12">.col-6-12</div>
-            <div class="grid-ex col-6-12">.col-6-12</div>
-        </div>
-        <div class="container">
-            <div class="grid-ex col-4-12">.col-4-12</div>
-            <div class="grid-ex col-4-12">.col-4-12</div>
-            <div class="grid-ex col-4-12">.col-4-12</div>
-        </div>
-        <div class="container">
-            <div class="grid-ex col-2-12">.col-2-12</div>
-            <div class="grid-ex col-2-12">.col-2-12</div>
-            <div class="grid-ex col-2-12">.col-2-12</div>
-            <div class="grid-ex col-2-12">.col-2-12</div>
-            <div class="grid-ex col-2-12">.col-2-12</div>
-            <div class="grid-ex col-2-12">.col-2-12</div>
-        </div>
+        <section id="gridex">
+            <div class="container title">
+                <h2>In Action</h2>
+            </div>
+            <div class="container">
+                <div class="grid-ex col-3-12">3/12</div>
+                <div class="grid-ex col-3-12">3/12</div>
+                <div class="grid-ex col-3-12">3/12</div>
+                <div class="grid-ex col-3-12">3/12</div>
+            </div>
+            <div class="container">
+                <div class="grid-ex col-8-12">8/12</div>
+                <div class="grid-ex col-3-12">3/12</div>
+                <div class="grid-ex col-1-12">1/12</div>
+            </div>
+            <div class="container">
+                <div class="grid-ex col-7-12">7/12</div>
+                <div class="grid-ex col-5-12">5/12</div>
+            </div>
+            <div class="container">
+                <div class="grid-ex col-6-12">6/12</div>
+                <div class="grid-ex col-6-12">6/12</div>
+            </div>
+            <div class="container">
+                <div class="grid-ex col-4-12">4/12</div>
+                <div class="grid-ex col-4-12">4/12</div>
+                <div class="grid-ex col-4-12">4/12</div>
+            </div>
+            <div class="container">
+                <div class="grid-ex col-2-12">2/12</div>
+                <div class="grid-ex col-2-12">2/12</div>
+                <div class="grid-ex col-2-12">2/12</div>
+                <div class="grid-ex col-2-12">2/12</div>
+                <div class="grid-ex col-2-12">2/12</div>
+                <div class="grid-ex col-2-12">2/12</div>
+            </div>
+        </section>
+        <section id="info">
+            <div class="container title">
+                <h2>The Grid</h2>
+            </div>
+            <div class="container">
+                <div class="col-6-12">
+                    <h3>First Off, Why?</h3>
+                    <p>Seriously, there are 9000 grid frameworks on Github, there is a herd of vicious octocats trying to prevent designers from uploading anymore. They have sharp teeth, Charles, you're playing a dangerous game here.</p>
+                    <p align="center"><img src="http://upload.wikimedia.org/wikipedia/commons/5/58/Human_brain.png" alt="" /></p>
+                    <p>Ugh, I know. But let me explain, so this is a brain. This is what happens inside mine when I try and solve front-end problems:</p>
+                    <p>"I need a grid. What are really good grid frameworks? Uhhhhh....... Foundation? I don't have time or energy to walk through all Foundations documentations. NEXT! Susy? I don't think I wanna use Compass because installing it takes a special phone call to the Vatican to request super special holy water to pour on my Macbook and then a few more hours for the Macbook to dry. NEXT! Bourbon Neat? I love Bourbon Neat! Bourbon and Autoprefixer hate each other, so not a smart idea. NEXT! Bootstrap? Bootstrap is getting faster and smarter, but I totally don't need all of it for this one thing."</p>
+                    <p>After the internal monolog, I think maybe a home spun solution with no depencies that I can just use in my existing SASS files might just be the ticket. All those frameworks are great but a lot of the time it feels like bringing a drone plane to a knife fight. I needed something smaller that I could decide through <code>@extends </code> when to declare and keep stuff really semantic.</p>
+                </div>
+                <div class="col-4-12">
+                    <h3>Well, My Interest is Peaked</h3>
+                    <p>Okay well, let's see here. Using it shouldn't be to difficult, all you need to do is define <code>@extend %col-x-x</code> to your classes.</p>
+                </div>
+                <div class="col-2-12">
+                    <a href="">Download</a>
+                    <br>
+                    <a href="#">Github</a>
+                    <br>
+                    <a href="#">Complaints</a>
+                </div>
+            </div>
+        </section>
     </main>
   </body>
 </html>

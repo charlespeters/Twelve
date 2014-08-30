@@ -1,22 +1,53 @@
 @import "twelve/twelve";
 
 $blue: #2487b0;
+$blue-gradient: linear-gradient(-75deg , $blue 0%, darken($blue, 10%) 100%);
 $pad: .25rem;
+$text: #b7cad3;
 
 html {
-    font-family: sans-serif;
+    font-family: 'Gotham SSm A', 'Gotham SSm B', Avenir, sans-serif;
     font-size: 100%;
     -webkit-font-smoothing: antialiased;
-    background: rgba($blue, .25);
+    background: darken($text, 12.5%);
+    color: $text;
 }
-
+h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+p {
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-size: 1.125rem;
+    color: darken($text, 50%);
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+.app {
+    &--title {
+        text: {
+            align: center;
+            transform: uppercase;
+        }
+        letter-spacing: .5rem;
+    }
+}
 header {
     padding: 2rem 1rem;
-    text-align: center;
-    color: tomato;
+    color: $text;
+    h1 {
+        font-size: 3rem;
+    }
 }
-
-
 
 $ends: 3,4,6,8,12;
 $gutterSize: 2%;
@@ -24,17 +55,11 @@ $gutterSize: 2%;
   @for $i from 1 through $end {
     .col-#{$i}-#{$end} {
         @extend %col-#{$i}-#{$end};
-        background: $blue;
-        color: white;
-        font-size: .875em;
-        padding: $pad*6 $pad;
-        border-bottom: 2px solid mix(tomato, $blue, 80%);
         @if $i > 6 {
             @include respond-to(handhelds) {
                 width: 100%;
                 margin-right: 0;
             }
-
         } @else {
            @include respond-to(handhelds) {
                 width: 49%;
@@ -48,8 +73,35 @@ $gutterSize: 2%;
 
 .grid-ex {
     text-align: center;
-    font-weight: bold;
+    text-transform: uppercase;
+    // letter-spacing: 1px;
+    font-weight: 300;
+    background: rgba($blue, .375);
+    color: darken($text, 50%);
+    font-size: 1rem;
+    word-wrap: break-word;
+    // box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+    padding: $pad*8 $pad;
 }
+
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    h2 {
+        margin-top: 2rem;
+        font-weight: 400;
+        &::after {
+            content: "";
+            display: block;
+            background: $text;
+            height: 2px;
+            width: 4rem;
+            margin: .5rem auto;
+        }
+    }
+}
+
 .container {
     @include grid-container();
     padding: 0 $pad*2 $pad*4;
