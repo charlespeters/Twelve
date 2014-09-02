@@ -6,7 +6,7 @@ $pad: .25rem;
 $text: #b7cad3;
 
 html {
-    font: 100%/1.5 'Gotham SSm A', 'Gotham SSm B', Avenir, sans-serif;
+    font: 400 100%/1.5 'Gotham SSm A', 'Gotham SSm B', Avenir, sans-serif;
     -webkit-font-smoothing: antialiased;
     background: darken($text, 12.5%);
     color: $text;
@@ -22,12 +22,12 @@ h2 {
     font-size: 2rem;
 }
 h3 {
-    font-size: 1.25rem;
+    font-size: 1.375rem;
     font-weight: 400;
 }
 p {
     margin-bottom: 1rem;
-    font-weight: 300;
+    // font-weight: 300;
     font-size: 1rem;
     color: darken($text, 50%);
     &:last-of-type {
@@ -36,6 +36,8 @@ p {
     code {
         background: darken($text, 6.25%);
         padding: .125rem;
+        border-radius: .25rem;
+        color: mix($blue, $text, 100%);
     }
 }
 a {
@@ -77,9 +79,9 @@ $gutterSize: 2%;
 }
 img {
     &.left {
-        max-width: 6rem;
+        max-width: 8rem;
         float: left;
-        opacity: .5;
+        opacity: .25;
         margin-right: 3%;
         margin-bottom: 1%;
     }
@@ -87,7 +89,6 @@ img {
 .grid-ex {
     text-align: center;
     text-transform: uppercase;
-    // letter-spacing: 1px;
     font-weight: 300;
     background: rgba($blue, .375);
     color: darken($text, 50%);
@@ -115,7 +116,22 @@ img {
     }
 }
 .download {
+    @include respond-to(handhelds) {
+        &::before {
+            content: "";
+            display: block;
+            background: $text;
+            height: 2px;
+            width: 4rem;
+            margin: 1rem auto;
+        }
+    }
+    p {
+        font-size: .875rem;
+        color: darken($text, 37.5%);
+    }
     a {
+        font-weight: 700;
         display: block;
         padding: $pad*4 $pad;
         background: rgba($blue, .375);
@@ -123,7 +139,7 @@ img {
         color: white;
         text-align: center;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 3px;
         border-radius: .5rem;
         transition: all 375ms linear;
         &:hover {
@@ -132,11 +148,9 @@ img {
         }
     }
 }
+
 .container {
     @include grid-container();
     padding: 0 $pad*2 2%;
-    font-size: 87.5%;
-    &:last-of-type {
-        margin-bottom: 0;
-    }
+    &:last-of-type { margin-bottom: 0; }
 }
