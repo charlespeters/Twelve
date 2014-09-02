@@ -33,12 +33,12 @@ Using Twelve you can write it a simpler:
 
 ```
 .page-wrap {
-    %grid-container;
+    @extend %grid-container;
     section {
-        %column-8-12;
+        @extend %column-8-12;
     }
     aside {
-        %column-4-12;
+        @extend %column-4-12;
     }
 }
 ```
@@ -53,21 +53,16 @@ and for the columns of your grid
 @include column-width($span-of-columns, $context, $margin);
 ```
 
-`$span` is a number of columns across and '$context' is total columns in your grid.
+`$span` is a number of columns across and `$context` is total columns in your grid.
 
-## Block Grid
+### Media Queries
 
-## Media Queries
+### Contributing
+Uhhh Please do?
 
-## Contributing
-
-## Licensing
+### Licensing
 MIT or GPL or WTFLP or Something
 
 ### To Do
 0. Finish README.md
 1. Work On Media Queries
-2. ~~Clean Up Old Functions and Mixins~~
-3. ~~Establish a Project Hierarchy~~
-4. Grid Block from [CSS-Tricks](http://css-tricks.com/video-screencasts/132-quick-useful-case-sass-math-mixins) Concept
-6. Work on Github Pages

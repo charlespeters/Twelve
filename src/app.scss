@@ -12,7 +12,7 @@ html {
     color: $text;
 }
 body {
-    padding: $pad*2;
+
 }
 h1, h2, h3 {
     margin-top: 0;
@@ -25,7 +25,7 @@ h3 {
     font-size: 1.375rem;
     font-weight: 400;
 }
-p {
+p, li {
     margin-bottom: 1rem;
     // font-weight: 300;
     font-size: 1rem;
@@ -40,8 +40,13 @@ p {
         color: mix($blue, $text, 100%);
     }
 }
+ul {
+    list-style: inside;
+    li { margin-bottom: .5rem; }
+}
 a {
     text-decoration: none;
+    color: rgba($blue, .5);
 }
 .app {
     &--title {
@@ -97,7 +102,9 @@ img {
     // box-shadow: 0 0 1rem rgba(0,0,0,0.5);
     padding: $pad*8 $pad;
 }
-
+main {
+    padding: $pad*2;
+}
 .title {
     text-align: center;
     text-transform: uppercase;
@@ -116,6 +123,12 @@ img {
     }
 }
 .download {
+    p {
+        font-size: .875rem;
+        color: darken($text, 37.5%);
+    }
+}
+aside {
     @include respond-to(handhelds) {
         &::before {
             content: "";
@@ -126,26 +139,25 @@ img {
             margin: 1rem auto;
         }
     }
-    p {
-        font-size: .875rem;
-        color: darken($text, 37.5%);
-    }
-    a {
-        font-weight: 700;
-        display: block;
-        padding: $pad*4 $pad;
-        background: rgba($blue, .375);
-        border: 2px solid rgba($blue, .5);
-        color: white;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        border-radius: .5rem;
-        transition: all 375ms linear;
-        &:hover {
-            background: rgba($blue, .75);
-            border: 2px solid rgba($blue, 1);
-        }
+}
+.btn {
+    font-weight: 700;
+    display: inline-block;
+    max-width: 20rem;
+    width: 100%;
+    margin: .25rem 0;
+    padding: $pad*4 $pad*2;
+    background: rgba($blue, .375);
+    border: 2px solid rgba($blue, .5);
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: .5rem;
+    transition: all 375ms linear;
+    &:hover {
+        background: rgba($blue, .75);
+        border: 2px solid rgba($blue, 1);
     }
 }
 
@@ -153,4 +165,14 @@ img {
     @include grid-container();
     padding: 0 $pad*2 2%;
     &:last-of-type { margin-bottom: 0; }
+}
+$orange: $text;
+$blue-2: rgba($blue, .5);
+$gold: $blue;
+.stripe {
+  width: 100%;
+  height: .5rem;
+  margin-bottom: 1rem;
+  background-image: -webkit-linear-gradient(left, $orange 0%, $orange 12.5%,$blue-2 12.5%,$blue-2 25%,$gold 25%,$gold 37.5%,$orange 37.5%,$orange 50%,$blue-2 50%,$blue-2 62.5%,$gold 62.5%,$gold 75%,$orange 75%,$orange 87.5%,$blue-2 87.5%, $blue-2 100%);
+  background-image: linear-gradient(left, $orange 0%, $orange 12.5%,$blue 12.5%,$blue-2 25%,$gold 25%,$gold 37.5%,$orange 37.5%,$orange 50%,$blue-2 50%,$blue-2 62.5%,$gold 62.5%,$gold 75%,$orange 75%,$orange 87.5%,$blue-2 87.5%, $blue-2 100%);
 }

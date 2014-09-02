@@ -6,13 +6,14 @@
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7107912/771344/css/fonts.css" />
   </head>
   <body>
+    <div class="stripe"></div>
     <header>
         <div class="container">
             <div class="app--title col-6-12">
                 <h1>Twelve</h1>
             </div>
             <div class="app--desc col-6-12">
-                <p>A SASS based grid designed by a crazy person.</p>
+                <p>A SASS based grid designed by a crazy person. You can find it on <a href="https://github.com/charlespeters">Github</a> and follow me on <a href="https://twitter.com/charlespeters">Twitter</a>.</p>
             </div>
         </div>
     </header>
@@ -66,7 +67,7 @@
                     <h3>First Off, Why?</h3>
                     <p>Seriously, there are 9000 grid frameworks on Github, there is a herd of vicious octocats trying to prevent designers from uploading anymore. They have sharp teeth, Charles, you're playing a dangerous game here.</p>
                     <p><img class="left" src="http://upload.wikimedia.org/wikipedia/commons/5/58/Human_brain.png" alt="" />Ugh, I know. But let me explain, so this is a brain. This is what happens inside mine when I try and solve front-end problems:</p>
-                    <p>"I need a grid. What are really good grid frameworks? Uhhhhh....... Foundation? I don't have time or energy to walk through all Foundations documentations. NEXT! Susy? I don't think I wanna use Compass because installing it takes a special phone call to the Vatican to request super special holy water to pour on my Macbook and then a few more hours for the Macbook to dry. NEXT! Bourbon Neat? I love Bourbon Neat! Bourbon and Autoprefixer hate each other, so not a smart idea. NEXT! Bootstrap? Bootstrap is getting faster and smarter, but I totally don't need all of it for this one thing."</p>
+                    <p>"I need a grid. What are really good grid frameworks? Uhhhhh....... Foundation? I don't have time or energy to walk through all Foundations documentations. NEXT! Susy? I don't think I wanna use Compass because installing it takes a phone call to the Vatican to request super special holy water to pour on my Macbook and then a few more hours for the Macbook to dry. NEXT! Bourbon Neat? I love Bourbon Neat! Bourbon and Autoprefixer hate each other, so not a smart idea. NEXT! Bootstrap? Bootstrap is getting faster and smarter, but I totally don't need all of it for this one thing."</p>
                     <p>After the internal monolog, I think maybe a home spun solution with no depencies that I can just use in my existing SASS files might just be the ticket. All those frameworks are great but a lot of the time it feels like bringing a drone plane to a knife fight. I needed something smaller that I could decide through <code>@extends</code> when to declare and keep stuff really semantic.</p>
                     <h3>Well, My Interest is Peaked</h3>
                     <p>Okay well, let's see here. Using it shouldn't be to difficult, all you need to do is define <code>@extend %col-x-x</code> to your classes.</p>
@@ -74,11 +75,11 @@
                 <aside class="col-4-12 download">
                     <p>I would love input &amp; feedback or help or fuck, even petty complaints. I love open source and can't make this better unless it's battle tested.</p>
                     <p>
-                        <a href="#">Download</a>
+                        <a class="btn" href="#">Download</a>
                         <br>
-                        <a href="#">Github</a>
+                        <a class="btn" href="#">Github</a>
                         <br>
-                        <a href="#">Complaints</a>
+                        <a class="btn" href="#">Complaints</a>
                     </p>
                 </aside>
             </div>
@@ -88,11 +89,57 @@
                 <h2>Roadmap</h2>
             </div>
             <div class="container">
-                <div class="col-4-12"></div>
-                <div class="col-4-12"></div>
-                <div class="col-4-12"></div>
+                <div class="col-4-12">
+                    <h3>First Priorities</h3>
+                    <ul>
+                        <li>Mobile First Media Queries</li>
+                        <li>Organic Media Queries Built into the Loops</li>
+                        <li>Showering</li>
+                        <li>Clearing Out the Repo of the Test</li>
+                    </ul>
+                </div>
+                <div class="col-4-12">
+                    <h3>Nice To Haves</h3>
+                    <ul>
+                        <li>Just CSS files for Rapid Prototyping</li>
+                        <li>Smarter Usage of Variables</li>
+                        <li>Support of Older IE</li>
+                        <li><a href="http://css-tricks.com/video-screencasts/132-quick-useful-case-sass-math-mixins">This</a> Type of Thing Incorportated Somehow</li>
+                        <li>Leveraging All the Cool Shit in SASS 3.4</li>
+                    </ul>
+                </div>
+                <div class="col-4-12">
+                    <h3>Miracles</h3>
+                    <ul>
+                        <li>Empirical Proof of the Existence of God</li>
+                        <li>Led Zeppelin Reunion Rumors to Become Fact</li>
+                        <li>John Bonham Rising from the Dead to Give His Blessing</li>
+                        <li>Never Supporting IE8, Ever Ever Again</li>
+                    </ul>
+                </div>
             </div>
         </section>
+        <section id="download">
+            <div class="container title">
+                <h2>Download</h2>
+            </div>
+            <div class="container">
+                <div class="col-12-12 download" align="center">
+                    <p>
+                        <a class="btn" href="#">Download</a>
+                        &nbsp;
+                        <a class="btn" href="#">Github</a>
+                        &nbsp;
+                        <a class="btn" href="#">Complaints</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <footer class="container">
+            <div class="col-12-12" align="center">
+                <p>&copy; 2014 <a href="http://www.charlespeters.net/">Charles Peters</a> &mdash; Licensed Under <a href="http://opensource.org/licenses/MIT">MIT</a></p>
+            </div>
+        </footer>
     </main>
   </body>
 </html>
