@@ -22,7 +22,7 @@ $gutterSize: 2%;
     %col-#{$i}-#{$end} {
         float: left;
         width: ($i*$single--column) + (($i - 1)*$gutterSize);
-        padding: $pad;
+        // padding: $pad;
         @if $i == $end {} @else {
           margin-right: $gutterSize;
           &:last-child { margin-right: 0; }
