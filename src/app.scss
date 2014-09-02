@@ -176,4 +176,9 @@ $gold: $blue;
   background-image: -moz-linear-gradient(to left, $orange 0%, $orange 12.5%,$blue-2 12.5%,$blue-2 25%,$gold 25%,$gold 37.5%,$orange 37.5%,$orange 50%,$blue-2 50%,$blue-2 62.5%,$gold 62.5%,$gold 75%,$orange 75%,$orange 87.5%,$blue-2 87.5%, $blue-2 100%);
   background-image: -webkit-linear-gradient(left, $orange 0%, $orange 12.5%,$blue-2 12.5%,$blue-2 25%,$gold 25%,$gold 37.5%,$orange 37.5%,$orange 50%,$blue-2 50%,$blue-2 62.5%,$gold 62.5%,$gold 75%,$orange 75%,$orange 87.5%,$blue-2 87.5%, $blue-2 100%);
   background-image: linear-gradient(left, $orange 0%, $orange 12.5%,$blue 12.5%,$blue-2 25%,$gold 25%,$gold 37.5%,$orange 37.5%,$orange 50%,$blue-2 50%,$blue-2 62.5%,$gold 62.5%,$gold 75%,$orange 75%,$orange 87.5%,$blue-2 87.5%, $blue-2 100%);
+  @include respond-to(handhelds) {
+      background-image: -moz-linear-gradient(to left, $orange 0%, $orange 12.5%,$blue 12.5%,$blue 25%,$gold 25%,$gold 37.5%,$orange 37.5%,$orange 50%,$blue 50%,$blue 62.5%,$gold 62.5%,$gold 75%,$orange 75%,$orange 87.5%,$blue 87.5%, $blue 100%);
+      background-image: -webkit-linear-gradient(left, $orange 0%, $orange 12.5%,$blue 12.5%,$blue 25%,$gold 25%,$gold 37.5%,$orange 37.5%,$orange 50%,$blue 50%,$blue 62.5%,$gold 62.5%,$gold 75%,$orange 75%,$orange 87.5%,$blue 87.5%, $blue 100%);
+      background-image: linear-gradient(left, $orange 0%, $orange 12.5%,$blue 12.5%,$blue 25%,$gold 25%,$gold 37.5%,$orange 37.5%,$orange 50%,$blue 50%,$blue 62.5%,$gold 62.5%,$gold 75%,$orange 75%,$orange 87.5%,$blue 87.5%, $blue 100%);
+  }
 }
