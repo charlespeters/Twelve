@@ -6,7 +6,7 @@
     <meta name="description" content="Twelve : Simple Twelve Column Grid">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7107912/771344/css/fonts.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/twelve--app.css">
-
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/pygment_trac.css">
     <title>Twelve</title>
 </head>
 <body>
@@ -74,17 +74,48 @@
             </div>
         </section>
     <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h2>
+        <section id="info">
+            <div class="container title">
+                <h2>The Grid</h2>
+                <h3>Really Simple SASS Mixins &amp; Extends to Create a Grid Layout</h3>
+            </div>
+            <div class="container">
+                <div class="col-7-12">
+                    <h3>First Off, Why?</h3>
+                    <p>Seriously, there are 9000 grid frameworks on Github, there is a herd of vicious octocats trying to prevent designers from uploading anymore. They have sharp teeth, Charles, you're playing a dangerous game here.</p>
+                    <p><img class="left" src="http://upload.wikimedia.org/wikipedia/commons/5/58/Human_brain.png" alt="" />Ugh, I know. But let me explain, so this is a brain. This is what happens inside mine when I try and solve front-end problems:</p>
+                    <p>"I need a grid. What are really good grid frameworks? Uhhhhh....... Foundation? I don't have time or energy to walk through all Foundations documentations. NEXT! Susy? I don't think I wanna use Compass because installing it takes a phone call to the Vatican to request super special holy water to pour on my Macbook and then a few more hours for the Macbook to dry. NEXT! Bourbon Neat? I love Bourbon Neat! Bourbon and Autoprefixer hate each other, so not a smart idea. NEXT! Bootstrap? Bootstrap is getting faster and smarter, but I totally don't need all of it for this one thing."</p>
+                    <p>After the internal monolog, I think maybe a home spun solution with no depencies that I can just use in my existing SASS files might just be the ticket. All those frameworks are great but a lot of the time it feels like bringing a drone plane to a knife fight. I needed something smaller that I could decide through <code>@extends</code> when to declare and keep stuff really semantic.</p>
+                    <h3>Well, My Interest is Peaked</h3>
+                    <p>Okay well, let's see here. Using it shouldn't be to difficult, all you need to do is define <code>@extend %col-x-x</code> to your classes.</p>
+                    <p>I have a for loop running to create <code>%partials</code> to generate classes like <code>%column-3-12</code> &amp; <code>%grid-container</code> to get a nice list of partials to extend into your project.</p>
+                    <h3>Contributing</h3>
+                    <p>Uhhh Please do?</p>
+                    <h3>Licensing</h3>
+                    <p>MIT or GPL or WTFLP or Something</p>
+                </div>
+                <aside class="col-4-12 download">
+                    <p>I would love input &amp; feedback or help or fuck, even petty complaints. I love open source and can't make this better unless it's battle tested.</p>
+                    <p>
+                        <a class="btn" href="#">Download</a>
+                        <br />
+                        <a class="btn" href="#">Github</a>
+                        <br />
+                        <a class="btn" href="#">Complaints</a>
+                    </p>
+                </aside>
+            </div>
+        </section>
+    <div id="main_content_wrap" class="outer container">
+        <section id="main_content" class="inner">
+            <h2>
 <a name="twelve" class="anchor" href="#twelve"><span class="octicon octicon-link"></span></a>Twelve</h2>
 
-<p>Really Simple SASS Mixins &amp; Extends to Create a Grid Layout</p>
+<p></p>
 
 <h2>
 <a name="extends-method" class="anchor" href="#extends-method"><span class="octicon octicon-link"></span></a>Extends Method</h2>
 
-<p>I have a for loop running to create <code>%partials</code> to generate classes like <code>%column-3-12</code> &amp; <code>%grid-container</code> to get a nice list of partials to extend into your project.</p>
 
 <h3>
 <a name="how-it-works" class="anchor" href="#how-it-works"><span class="octicon octicon-link"></span></a>How it Works</h3>
@@ -139,23 +170,9 @@
 <h3>
 <a name="media-queries" class="anchor" href="#media-queries"><span class="octicon octicon-link"></span></a>Media Queries</h3>
 
-<h3>
-<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h3>
 
-<p>Uhhh Please do?</p>
 
-<h3>
-<a name="licensing" class="anchor" href="#licensing"><span class="octicon octicon-link"></span></a>Licensing</h3>
 
-<p>MIT or GPL or WTFLP or Something</p>
-
-<h3>
-<a name="to-do" class="anchor" href="#to-do"><span class="octicon octicon-link"></span></a>To Do</h3>
-
-<ol>
-<li>Finish README.md</li>
-<li>Work On Media Queries</li>
-</ol>
       </section>
     </div>
             <section id="roadmap">
