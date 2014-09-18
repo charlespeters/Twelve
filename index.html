@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Twelve : Simple Twelve Column Grid">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Twelve</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/charlespeters/Twelve">View on GitHub</a>
+
+          <h1 id="project_title">Twelve</h1>
+          <h2 id="project_tagline">Simple Twelve Column Grid</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/charlespeters/Twelve/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/charlespeters/Twelve/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a name="twelve" class="anchor" href="#twelve"><span class="octicon octicon-link"></span></a>Twelve</h2>
+
+<p>Really Simple SASS Mixins &amp; Extends to Create a Grid Layout</p>
+
+<h2>
+<a name="extends-method" class="anchor" href="#extends-method"><span class="octicon octicon-link"></span></a>Extends Method</h2>
+
+<p>I have a for loop running to create <code>%partials</code> to generate classes like <code>%column-3-12</code> &amp; <code>%grid-container</code> to get a nice list of partials to extend into your project.</p>
+
+<h3>
+<a name="how-it-works" class="anchor" href="#how-it-works"><span class="octicon octicon-link"></span></a>How it Works</h3>
+
+<p>You may write some SASS like this:</p>
+
+<pre><code>.page-wrap {
+    max-width: 70rem;
+    margin: 0 auto;
+    section {
+        width: 74%;
+        margin-right: 2%;
+        float: left;
+    }
+    aside {
+        width: 26%;
+        float: right;
+    }
+    &amp;::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
+</code></pre>
+
+<p>Using Twelve you can write it a simpler:</p>
+
+<pre><code>.page-wrap {
+    @extend %grid-container;
+    section {
+        @extend %column-8-12;
+    }
+    aside {
+        @extend %column-4-12;
+    }
+}
+</code></pre>
+
+<h2>
+<a name="includes-method" class="anchor" href="#includes-method"><span class="octicon octicon-link"></span></a>Includes Method</h2>
+
+<p>Start by declaring <code>@include grid--container($container);</code> on your outer container/page-wrap/whatever you want to call it. You can pass it a <code>max-width</code> of whatever you'd like.</p>
+
+<p>and for the columns of your grid</p>
+
+<pre><code>@include column-width($span-of-columns, $context, $margin);
+</code></pre>
+
+<p><code>$span</code> is a number of columns across and <code>$context</code> is total columns in your grid.</p>
+
+<h3>
+<a name="media-queries" class="anchor" href="#media-queries"><span class="octicon octicon-link"></span></a>Media Queries</h3>
+
+<h3>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h3>
+
+<p>Uhhh Please do?</p>
+
+<h3>
+<a name="licensing" class="anchor" href="#licensing"><span class="octicon octicon-link"></span></a>Licensing</h3>
+
+<p>MIT or GPL or WTFLP or Something</p>
+
+<h3>
+<a name="to-do" class="anchor" href="#to-do"><span class="octicon octicon-link"></span></a>To Do</h3>
+
+<ol>
+<li>Finish README.md</li>
+<li>Work On Media Queries</li>
+</ol>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Twelve maintained by <a href="https://github.com/charlespeters">charlespeters</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
