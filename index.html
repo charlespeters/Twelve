@@ -6,7 +6,18 @@
     <meta name="description" content="Twelve : Simple Twelve Column Grid">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7107912/771344/css/fonts.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/twelve--app.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/pygment_trac.css">
+    <style media="screen">
+        pre {
+            background: rgba(36,135,176,0.375);
+            padding: .5rem;
+            max-width: 38rem;
+            overflow-x: scroll;
+            margin: 1rem 0;
+        }
+        pre code {
+            color: white;
+        }
+    </style>
     <title>Twelve</title>
 </head>
 <body>
@@ -89,6 +100,14 @@
                     <h3>Well, My Interest is Peaked</h3>
                     <p>Okay well, let's see here. Using it shouldn't be to difficult, all you need to do is define <code>@extend %col-x-x</code> to your classes.</p>
                     <p>I have a for loop running to create <code>%partials</code> to generate classes like <code>%column-3-12</code> &amp; <code>%grid-container</code> to get a nice list of partials to extend into your project.</p>
+                    <h3>The Other Way</h3>
+                    <p>Start by declaring <code>@include grid--container($container);</code> on your outer container/page-wrap/whatever you want to call it. You can pass it a <code>max-width</code> of whatever you'd like.</p>
+
+                    <p>and for the columns of your grid</p>
+
+                    <p><code>@include column-width($span-of-columns, $context, $margin);</code></p>
+
+                    <p><code>$span</code> is a number of columns across and <code>$context</code> is total columns in your grid.</p>
                     <h3>Contributing</h3>
                     <p>Uhhh Please do?</p>
                     <h3>Licensing</h3>
@@ -103,26 +122,11 @@
                         <br />
                         <a class="btn" href="#">Complaints</a>
                     </p>
-                </aside>
-            </div>
-        </section>
-    <div id="main_content_wrap" class="outer container">
-        <section id="main_content" class="inner">
-            <h2>
-<a name="twelve" class="anchor" href="#twelve"><span class="octicon octicon-link"></span></a>Twelve</h2>
+                    <h3>How it Works</h3>
 
-<p></p>
+                    <p>You may write some SASS like this:</p>
 
-<h2>
-<a name="extends-method" class="anchor" href="#extends-method"><span class="octicon octicon-link"></span></a>Extends Method</h2>
-
-
-<h3>
-<a name="how-it-works" class="anchor" href="#how-it-works"><span class="octicon octicon-link"></span></a>How it Works</h3>
-
-<p>You may write some SASS like this:</p>
-
-<pre><code>.page-wrap {
+                    <pre><code>.page-wrap {
     max-width: 70rem;
     margin: 0 auto;
     section {
@@ -139,12 +143,9 @@
         clear: both;
         display: block;
     }
-}
-</code></pre>
-
-<p>Using Twelve you can write it a simpler:</p>
-
-<pre><code>.page-wrap {
+}</code></pre>
+                    <p>Using Twelve you can write it a simpler:</p>
+                    <pre><code>.page-wrap {
     @extend %grid-container;
     section {
         @extend %column-8-12;
@@ -152,27 +153,10 @@
     aside {
         @extend %column-4-12;
     }
-}
-</code></pre>
-
-<h2>
-<a name="includes-method" class="anchor" href="#includes-method"><span class="octicon octicon-link"></span></a>Includes Method</h2>
-
-<p>Start by declaring <code>@include grid--container($container);</code> on your outer container/page-wrap/whatever you want to call it. You can pass it a <code>max-width</code> of whatever you'd like.</p>
-
-<p>and for the columns of your grid</p>
-
-<pre><code>@include column-width($span-of-columns, $context, $margin);
-</code></pre>
-
-<p><code>$span</code> is a number of columns across and <code>$context</code> is total columns in your grid.</p>
-
-<h3>
-<a name="media-queries" class="anchor" href="#media-queries"><span class="octicon octicon-link"></span></a>Media Queries</h3>
-
-
-
-
+}</code></pre>
+                </aside>
+            </div>
+        </section>
       </section>
     </div>
             <section id="roadmap">
