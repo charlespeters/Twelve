@@ -1,5 +1,9 @@
+$classes: false !default;
 
-%container {
+
+
+@if $classes == true {
+	.container {
 		margin: 0 auto;
 		max-width: $container;
 		&::after {
@@ -7,46 +11,53 @@
 				display: table;
 				clear: both;
 		}
-}
-
-
-// Runs through the number of columns max
-// Creates a group of @extend %partials based off that
-
-$ends: 3,4,6,8,12;
-$gutterSize: 2%;
-@each $end in $ends {
-	@for $i from 1 through $end {
-		$single--column: (100 - (($end - 1)*$gutterSize )) / $end;
-		%col-#{$i}-#{$end} {
-				float: left;
-				width: ($i*$single--column) + (($i - 1)*$gutterSize);
-				// padding: $pad;
-				@if $i == $end {} @else {
-					margin-right: $gutterSize;
-					&:last-child { margin-right: 0; }
-				}
+	}
+	// Runs through the number of columns max
+	// Creates a group of classes based off that
+	$ends: 3,4,6,8,12;
+	$gutterSize: 2%;
+	@each $end in $ends {
+		@for $i from 1 through $end {
+			$single--column: (100 - (($end - 1)*$gutterSize )) / $end;
+			.col-#{$i}-#{$end} {
+					float: left;
+					width: ($i*$single--column) + (($i - 1)*$gutterSize);
+					// padding: $pad;
+					@if $i == $end {} @else {
+						margin-right: $gutterSize;
+						&:last-child { margin-right: 0; }
+					}
+			}
 		}
 	}
-}
+} @else {
+	%container {
+			margin: 0 auto;
+			max-width: $container;
+			&::after {
+					content: "";
+					display: table;
+					clear: both;
+			}
+	}
+	// Runs through the number of columns max
+	// Creates a group of @extend %partials based off that
 
-
-// Runs through the number of columns max
-// Creates a group of classes based off that
-
-$ends: 3,4,6,8,12;
-$gutterSize: 2%;
-@each $end in $ends {
-	@for $i from 1 through $end {
-		$single--column: (100 - (($end - 1)*$gutterSize )) / $end;
-		.col-#{$i}-#{$end} {
-				float: left;
-				width: ($i*$single--column) + (($i - 1)*$gutterSize);
-				// padding: $pad;
-				@if $i == $end {} @else {
-					margin-right: $gutterSize;
-					&:last-child { margin-right: 0; }
-				}
+	$ends: 3,4,6,8,12;
+	$gutterSize: 2%;
+	@each $end in $ends {
+		@for $i from 1 through $end {
+			$single--column: (100 - (($end - 1)*$gutterSize )) / $end;
+			%col-#{$i}-#{$end} {
+					float: left;
+					width: ($i*$single--column) + (($i - 1)*$gutterSize);
+					// padding: $pad;
+					@if $i == $end {} @else {
+						margin-right: $gutterSize;
+						&:last-child { margin-right: 0; }
+					}
+			}
 		}
 	}
+
 }
