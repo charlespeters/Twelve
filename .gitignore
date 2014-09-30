@@ -24,3 +24,4 @@ Thumbs.db
 
 dist/
 src/*.html
+src/app.scss
