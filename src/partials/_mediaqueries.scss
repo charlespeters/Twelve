@@ -1,9 +1,12 @@
-@mixin respond-to($media) {
+@mixin mq($media) {
     @if $media == handhelds {
         @media only screen and (max-width: $breakpoint--small) { @content; }
     }
+/*     @else if \$media == mediumscreens {
+    @media only screen and (min-width: \$breakpoint--small + 1) and (max-width: \$breakpoint--large - 1) { @content; }
+} */
     @else if $media == mediumscreens {
-        @media only screen and (min-width: $breakpoint--small + 1) and (max-width: $breakpoint--large - 1) { @content; }
+        @media only screen and (max-width: $breakpoint--large - 1) { @content; }
     }
     @else if $media == widescreens {
         @media only screen and (min-width: $breakpoint--large) { @content; }
