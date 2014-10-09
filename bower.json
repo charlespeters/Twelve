@@ -1,0 +1,24 @@
+{
+  "name": "twelve",
+  "version": "0.1.0",
+  "homepage": "https://github.com/charlespeters/Twelve",
+  "authors": [
+    "charlespeters <charlespeters42@gmail.com>"
+  ],
+  "description": "SASS based grid framework",
+  "main": "src/twelve.scss",
+  "keywords": [
+    "SASS",
+    "grids",
+    "layout",
+    "framework"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
