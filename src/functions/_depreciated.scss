@@ -3,12 +3,6 @@
     @return ($span / $context);
 }
 
-/*
-    transforms that decimal to a percentage the browser can use
-    creates a column that floats left.
-
-*/
-
 @mixin old--col($span, $context){
     float: left;
     padding: $pad;

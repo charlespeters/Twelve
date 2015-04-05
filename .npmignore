@@ -1,10 +1,10 @@
-# Grunt #
+# Gulp #
 #########
-node_modules
 *.sass_cache*
 **.sass-cache**
 **/.sass-cache/*
 .sass_cache
+
 
 # Logs and databases #
 ######################
@@ -21,4 +21,8 @@ node_modules
 .Trashes
 ehthumbs.db
 Thumbs.db
-*.css
+
+dist/
+src/*.html
+app.scss
+app/

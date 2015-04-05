@@ -1,0 +1,23 @@
+%container {
+    margin: 0 auto;
+    max-width: $max--width;
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
+
+@each $end in $ends {
+  @for $i from 1 through $end {
+    $single--column: (100 - (($end - 1)*$gutter )) / $end;
+    %col-#{$i}-#{$end} {
+      // float: left;
+      width: ($i*$single--column) + (($i - 1)*$gutter);
+      @if $i != $end {
+        margin-right: $gutter;
+        &:last-child { margin-right: 0; }
+      }
+    }
+  }
+}

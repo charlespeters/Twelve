@@ -1,0 +1,42 @@
+.container {
+  margin: 0 auto;
+  max-width: $max--width;
+  width: 100%;
+  &::after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+  &--half {
+    margin: 0 auto;
+    max-width: $max--width/2;
+    width: 100%;
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+  }
+}
+
+
+@each $float in $floats {
+  .fl--#{$float} { float: $float; }
+}
+
+@each $end in $ends {
+  @for $i from 1 through $end {
+    $single--column: (100 - (($end - 1)*$gutter )) / $end;
+    .col--#{$i}-#{$end} {
+      // float: left;
+      width: ($i*$single--column) + (($i - 1)*$gutter);
+      @if $i != $end {
+        margin-right: $gutter;
+        &:last-child { margin-right: 0; }
+      }
+      @else if $gutter > 5% {
+        @error 'Uhhh...$gutter is bigger than 5% you shouldn\'t really go much bigger than 5%. I\'m serious';
+      }
+    }
+  }
+}

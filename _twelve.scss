@@ -1,9 +1,14 @@
-@import 'src/partials/variables';
-
 @import 'src/functions/depreciated';
-@import 'src/functions/extends';
-@import 'src/functions/classes';
-@import 'src/functions/container';
-@import 'src/functions/colfunction';
 
-@import 'src/partials/mediaqueries';
+@import 'src/util/settings';
+@import 'src/util/classes';
+@import 'src/util/extends';
+
+@if $grid--classes == true { } @else { }
+
+@import 'src/mixins/container';
+@import 'src/mixins/colfunction';
+
+@import 'src/grids/small';
+@import 'src/grids/medium';
+@import 'src/grids/large';
