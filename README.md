@@ -1,31 +1,35 @@
-Twelve
----
-Really Simple SASS Mixins & Extends to Create a Grid Layout
+# Twelve
+
+<a href="https://github.com/charlespeters/VVWIP">
+  <img src="https://unpkg.com/vvwip/IGVP.svg" alt="IGVP" />
+</a>
+
+Really Simple Sass Mixins & Extends to Create a Grid Layout
 
 ## Extends Method
 I have a for loop running to create `%partials` to generate classes like `%column-3-12` &amp; `%grid-container` to get a nice list of partials to extend into your project.
 
 ### How it Works
-You may write some SASS like this:
+You may write some Sass like this:
 
 ```
 .page-wrap {
-    max-width: 70rem;
-    margin: 0 auto;
-    section {
-        width: 74%;
-        margin-right: 2%;
-        float: left;
-    }
-    aside {
-        width: 26%;
-        float: right;
-    }
-    &::after {
-        content: "";
-        clear: both;
-        display: block;
-    }
+  max-width: 70rem;
+  margin: 0 auto;
+  section {
+    width: 74%;
+    margin-right: 2%;
+    float: left;
+  }
+  aside {
+    width: 26%;
+    float: right;
+  }
+  &::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
 }
 ```
 
@@ -33,13 +37,9 @@ Using Twelve you can write it a simpler:
 
 ```
 .page-wrap {
-    @extend %grid-container;
-    section {
-        @extend %column-8-12;
-    }
-    aside {
-        @extend %column-4-12;
-    }
+  @extend %grid-container;
+  section { @extend %column-8-12; }
+  aside { @extend %column-4-12; }
 }
 ```
 

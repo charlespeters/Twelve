@@ -23,5 +23,3 @@ ehthumbs.db
 Thumbs.db
 
 dist/
-src/*.html
-app.scss
