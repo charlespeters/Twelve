@@ -1,11 +1,11 @@
 // the @for directive as a mixin
 @mixin col-width($n, $context, $margin: 2%) {
-    $width: (100% - (($context - 1) * $margin))/$context;
-    float: left;
-    width: ($n*$width) + (($n - 1) * $margin);
-    padding: $pad;
-    @if $n == $context {} @else {
-      margin-right: $margin;
-      &:last-child { margin-right: 0; }
-    }
+  $width: (100% - (($context - 1) * $margin)) / $context;
+  float: left;
+  width: ($n*$width) + (($n - 1) * $margin);
+  padding: $pad;
+  @if $n == $context {} @else {
+    margin-right: $margin;
+    &:last-child { margin-right: 0; }
+  }
 }
