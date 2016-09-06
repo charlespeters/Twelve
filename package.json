@@ -10,7 +10,6 @@
     "type": "git",
     "url": "https://github.com/charlespeters/Twelve.git"
   },
-  "dependencies": {},
   "devDependencies": {
     "node-sass": "*"
   }
